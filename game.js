@@ -6,6 +6,7 @@ var turnText = document.querySelector(".playerTurn");
 var counter = 1;
 var RedMoves = [];
 var YellowMoves = [];
+var table = $('table tr');
 
 function start() {
 	console.log("begin");
@@ -37,8 +38,18 @@ function addRedorYellow(event) {
 			turnText.innerHTML = "It is Player Yellow's turn"
 			counter++
 			// checkforwin
+			}
+		}
+	} 
+
+	function checkBottom(colIndex) {
+		var colourReport = addRedorYellow(5,colIndex);
+		for (var row = 5; row > -1; row--) {
+			colourReport = addRedorYellow(row,colIndex);
+			if (colourReport === null) {
+				return row
+			}
 		}
 	}
-} 
 })
 
