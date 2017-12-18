@@ -4,6 +4,8 @@ console.log("before global");
 var boxes = document.getElementsByTagName("td");
 var turnText = document.querySelector(".playerTurn");
 var counter = 1;
+var RedMoves = [];
+var YellowMoves = [];
 
 function start() {
 	console.log("begin");
@@ -16,6 +18,7 @@ function addRedandYellowListener() {
 		boxes[i].addEventListener("click", addRedorYellow);
 	}
 }
+addRedandYellowListener();
 
 function addRedorYellow(event) {
 	if (event.target.innerHTML.length === 0) {
@@ -23,7 +26,7 @@ function addRedorYellow(event) {
 			YellowMoves.push(parseInt(event.target.getAttribute("data-num")));
 			event.target.innerHTML = "Yellow";
 			event.target.setAttribute("class","Yellow");
-			turnText.innerHTML = "It is Player Yellow's turn";
+			turnText.innerHTML = "It is Player Red's turn";
 			counter++;
 			// checkforwin
 		}
@@ -31,7 +34,7 @@ function addRedorYellow(event) {
 			RedMoves.push(parseInt(event.target.getAttribute("data-num")));
 			event.target.innerHTML = "Red";
 			event.target.setAttribute("class", "Red");
-			turnText.innerHTML = "It is Player Red's turn"
+			turnText.innerHTML = "It is Player Yellow's turn"
 			counter++
 			// checkforwin
 		}
