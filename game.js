@@ -80,7 +80,7 @@ var table = $('table tr');
 		      
 	// 	}
 	// }
-	function changeColor(rowI,colI,color) {
+	function DiffColor(rowI,colI,color) {
 		return table.eq(rowI).find('td').eq(colI).css('background-color',color)
 	}
 
@@ -102,45 +102,61 @@ var table = $('table tr');
 		return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
 	}
 
-	function chkWin(){
-		// Verical
-		for (var row = 0; row < 3; row++);{
-			for (var col = 0; col < 7; col++);{
-				if (colorMatch(colorReport(row,col), colorReport(row+1,col), colorReport(row+2,col), colorReport(row+3,col)));{
+	function chkWinVert(){
+		// Vertical
+		for (var row = 0; row < 3; row++){
+			for (var col = 0; col < 7; col++){
+				if (colorMatch(returnColor(row,col), returnColor(row+1,col), returnColor(row+2,col), returnColor(row+3,col))){
 					console.log("hihi");
-					sendWin(row,col);
+					// reportWin(row,col);
 					return true;
-			}
-		}
+					} else {
+						continue;
+					}
+				}
+			}	
 	}
-		// Horizontal 
-		for (var row = 0; row < 6; row++);{
-			for (var col = 0; col < 4; col++);{
-				if (colorMatch(colorReport(row,col), colorReport(row,col+1), colorReport(row,col+2), colorReport(row,col+3))); {
-				sendWin(row,col);
+		function chkWinHor() {// Horizontal 	
+		for (var row = 0; row < 6; row++){
+			for (var col = 0; col < 4; col++){
+				if (colorMatch(returnColor(row,col), returnColor(row,col+1), returnColor(row,col+2), returnColor(row,col+3))) {
+				// sendWin(row,col);
 				return true;
+			} else {
+				continue;
+				}
 			}
-		}
+		}		
 	}	
 		// Diag R
-		for (var row = 0; row < 3; row++);{
-			for (var col = 0; col < 4; col++);{				
-				if (colorMatch(colorReport(row,col), colorReport(row+1,col+1), colorReport(row+2,col+2), colorReport(row+3,col+3))); {
-				sendWin(row,col);
+		function chkWinDiagR() {
+		for (var row = 0; row < 7; row++){
+			for (var col = 0; col < 5; col++){				
+				if (colorMatch(returnColor(row,col), returnColor(row+1,col+1), returnColor(row+2,col+2), returnColor(row+3,col+3))) {
+				// sendWin(row,col);
 				return true;
-			}
-		}
-	}
-		// Diag L
-		for (var row = 3; row < 6; row++);{
-			for (var col = 0; col <4; col++);{
-				if (colorMatch(colorReport(row,col), colorReport(row-1,col+1), colorReport(row-2,col+2), colorReport(row-3,col+3)));{
-				sendWin(row,col);
+			} else if (colorMatch(returnColor(row,col), returnColor(row-1,col+1), returnColor(row-2,col+2), returnColor(row-3,col+3))) {
+				// sendWin(row,col);
 				return true;
+			} else {
+				continue;
+				}
 			}
 		}	
-	}
-}
+	 }
+		// Diag L
+	// 	function chkWinDiagL() {
+	// 	for (var row = 3; row < 6; row++);{
+	// 		for (var col = 0; col <4; col++);{
+	// 			if (colorMatch(returnColor(row,col), returnColor(row-1,col+1), returnColor(row-2,col+2), returnColor(row-3,col+3))) {
+	// 			// sendWin(row,col);
+	// 			return true;
+	// 		} else {
+	// 			continue
+	// 			}
+	// 		}
+	// 	}	
+	// }
 
 	var currentPlayer = 1;
 	var currentName = playerRed;
@@ -151,7 +167,11 @@ var table = $('table tr');
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
 
-	changeColor(bottomFree,col,currentColor);
+	DiffColor(bottomFree,col,currentColor);
+
+	if (chkWinVert() || chkWinHor() || chkWinDiagR()) {
+		alert("You Have Won");
+	}
 
 	currentPlayer = currentPlayer * -1
 
