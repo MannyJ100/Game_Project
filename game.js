@@ -98,10 +98,17 @@ var table = $('table tr');
 		}
 	}
 
-	function addResetListener(){
-		var resetButton = document.getELementById("Reset");
-		ResetButton.addEventListener("click", resetBoard);
-	}
+	// function addResetListener(){
+	// 	var resetButton = document.getELementById("Reset");
+	// 	ResetButton.addEventListener("click", ResetBoard);
+	// }
+
+	// function ResetBoard(){
+	// 	for (var i = boxes.length - 1; i >= 0; i--) {
+	// 		boxes[i].innerHTML="";
+	// 		boxes[i].setAttribute("class","clear");
+	// 	}
+	// }
 	
 
 	function colorMatch(a,b,c,d) {
