@@ -80,27 +80,27 @@ var table = $('table tr');
 		      
 	// 	}
 	// }
-	function changeColor(rowIndex,colIndex,color) {
-		return table.eq(rowIndex).find('td').eq(colIndex).css('background-color',color)
+	function changeColor(rowI,colI,color) {
+		return table.eq(rowI).find('td').eq(colI).css('background-color',color)
 	}
 
-	function returnColor(rowIndex,colIndex){
-		return table.eq(rowIndex).find('td').eq(colIndex).css('background-color');
+	function returnColor(rowI,colI){
+		return table.eq(rowI).find('td').eq(colI).css('background-color');
 	}
 
-	function lowestFree(colIndex) {
-		var colorReport = returnColor(5,colIndex);
+	function lowestFree(colI) {
+		var colorReport = returnColor(5,colI);
 		for (var row = 5; row > -1; row--) {
-			colorReport = returnColor(row,colIndex);
+			colorReport = returnColor(row,colI);
 			if (colorReport === 'rgb(128, 128, 128)') {
 				return row
 			}
 		}
 	}
 
-	function colorMatch(one,two,three,four) {
-		return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
-	}
+	// function colorMatch(one,two,three,four) {
+	// 	return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
+	// }
 
 	var currentPlayer = 1;
 	var currentName = playerRed;
