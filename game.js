@@ -88,7 +88,7 @@ var table = $('table tr');
 		return table.eq(rowIndex).find('td').eq(colIndex).css('background-color');
 	}
 
-	function checkBottom(colIndex) {
+	function lowestFree(colIndex) {
 		var colorReport = returnColor(5,colIndex);
 		for (var row = 5; row > -1; row--) {
 			colorReport = returnColor(row,colIndex);
@@ -109,19 +109,19 @@ var table = $('table tr');
 	$('td').on('click', function(){
 
 		var col = $(this).closest('td').index();
-		var bottomAvail = checkBottom(col);
+		var bottomFree = lowestFree(col);
 
-	changeColor(bottomAvail,col,currentColor);
+	changeColor(bottomFree,col,currentColor);
 
 	currentPlayer = currentPlayer * -1
 
 	if (currentPlayer === 1) {
 		currentName = playerRed;
-		$('h2').text(currentName + " it is your turn.")
+		$('h2').text(currentName + " it is your turn to connect")
 		currentColor = player1Color;
 	}	else {
 		currentName = playerYellow;
-		$('h2').text(currentName + " it is your turn.")
+		$('h2').text(currentName + " it is your turn to connect")
 		currentColor = player2Color;
 
 	}
