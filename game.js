@@ -98,8 +98,14 @@ var table = $('table tr');
 		}
 	}
 
-	function colorMatch(one,two,three,four) {
-		return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
+	function addResetListener(){
+		var resetButton = document.getELementById("Reset");
+		ResetButton.addEventListener("click", resetBoard);
+	}
+	
+
+	function colorMatch(a,b,c,d) {
+		return (a === b && a === c && a === d && a !== 'rgb(128, 128, 128)' && a !== undefined)
 	}
 
 	function chkWinVert(){
@@ -129,7 +135,7 @@ var table = $('table tr');
 		}		
 	}	
 		// Diag R
-		function chkWinDiagR() {
+		function chkWinDiag() {
 		for (var row = 0; row < 7; row++){
 			for (var col = 0; col < 5; col++){				
 				if (colorMatch(returnColor(row,col), returnColor(row+1,col+1), returnColor(row+2,col+2), returnColor(row+3,col+3))) {
@@ -169,7 +175,7 @@ var table = $('table tr');
 
 	DiffColor(bottomFree,col,currentColor);
 
-	if (chkWinVert() || chkWinHor() || chkWinDiagR()) {
+	if (chkWinVert() || chkWinHor() || chkWinDiag()) {
 		alert("You Have Won");
 	}
 

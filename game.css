@@ -1,6 +1,7 @@
 .board {
 	background-color: blue;
 	border-radius: 10px;
+
 }
 
 td {
@@ -12,7 +13,7 @@ td {
 	background-color: gray
 }
 
-.Red {
+/*.Red {
 	color: red;
 	background-color: red;
 }
@@ -20,5 +21,5 @@ td {
 .Yellow {
 	color: yellow;
 	background-color: yellow
-}
+}*/
 
