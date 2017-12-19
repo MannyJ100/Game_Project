@@ -98,9 +98,49 @@ var table = $('table tr');
 		}
 	}
 
-	// function colorMatch(one,two,three,four) {
-	// 	return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
-	// }
+	function colorMatch(one,two,three,four) {
+		return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined)
+	}
+
+	function chkWin(){
+		// Verical
+		for (var row = 0; row < 3; row++);{
+			for (var col = 0; col < 7; col++);{
+				if (colorMatch(colorReport(row,col), colorReport(row+1,col), colorReport(row+2,col), colorReport(row+3,col)));{
+					console.log("hihi");
+					sendWin(row,col);
+					return true;
+			}
+		}
+	}
+		// Horizontal 
+		for (var row = 0; row < 6; row++);{
+			for (var col = 0; col < 4; col++);{
+				if (colorMatch(colorReport(row,col), colorReport(row,col+1), colorReport(row,col+2), colorReport(row,col+3))); {
+				sendWin(row,col);
+				return true;
+			}
+		}
+	}	
+		// Diag R
+		for (var row = 0; row < 3; row++);{
+			for (var col = 0; col < 4; col++);{				
+				if (colorMatch(colorReport(row,col), colorReport(row+1,col+1), colorReport(row+2,col+2), colorReport(row+3,col+3))); {
+				sendWin(row,col);
+				return true;
+			}
+		}
+	}
+		// Diag L
+		for (var row = 3; row < 6; row++);{
+			for (var col = 0; col <4; col++);{
+				if (colorMatch(colorReport(row,col), colorReport(row-1,col+1), colorReport(row-2,col+2), colorReport(row-3,col+3)));{
+				sendWin(row,col);
+				return true;
+			}
+		}	
+	}
+}
 
 	var currentPlayer = 1;
 	var currentName = playerRed;
