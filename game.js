@@ -77,7 +77,18 @@ var table = $('table tr');
 				}
 			}	
 	 }
-		
+
+
+	 // Reset Button
+	$("#Reset").on('click', function(){
+		console.log("hello");
+		resetGrid();
+	});
+
+	function resetGrid(){
+		$("td").css("background-color", "gray");
+	}	
+
 		// Starting player
 	var currentPlayer = 1;
 	var currentName = playerRed;
@@ -92,6 +103,8 @@ var table = $('table tr');
 
 		if (chkWinVert() || chkWinHor() || chkWinDiag()) {
 			alert("You Have Won");
+			resetGrid();
+
 		}
 
 		//Player switch 
@@ -109,5 +122,4 @@ var table = $('table tr');
 		}
 	})
 
-
-})
+});

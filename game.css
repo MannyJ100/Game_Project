@@ -1,7 +1,10 @@
 .board {
 	background-color: blue;
 	border-radius: 10px;
+}
 
+#Reset {
+	margin-top: 20px;
 }
 
 td {
