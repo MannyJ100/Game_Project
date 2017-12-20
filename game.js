@@ -104,10 +104,12 @@ $(function() {
 		if (chkWinVert() || chkWinHor() || chkWinDiag()) {
 			alert("You Have Won");
 			resetGrid();
-
 		}
+	playerSwitch();
+	})
 
-		//Player switch 
+	
+	function playerSwitch() {
 	currentPlayer = currentPlayer * -1
 
 		if (currentPlayer === 1) {
@@ -118,8 +120,6 @@ $(function() {
 			currentName = playerYellow;
 			$('h2').text(currentName + " it is your turn to connect")
 			currentColor = player2Color;
-
 		}
-	})
-
+	}
 });
