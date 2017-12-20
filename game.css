@@ -9,10 +9,12 @@ h1 {
 }
 
 p {
+	font-family: 'Bungee', cursive;
 	color: red;
 }
 
 h2 {
+	font-family: 'Bungee', cursive;
 	color: white;
 }
 
@@ -21,7 +23,10 @@ h2 {
 }
 
 #Reset {
+	font-family: 'Bungee', cursive;
 	margin-top: 10px;
+	color: red;
+	background-color: yellow;
 }
 
 td {
