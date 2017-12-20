@@ -1,10 +1,27 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	font-family: 'Bungee', cursive;
+	font-size: 50px;
+	color: yellow;
+}
+
+p {
+	color: red;
+}
+
+h2 {
+	color: white;
+}
+
 .board {
-	background-color: blue;
 	border-radius: 10px;
 }
 
 #Reset {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 td {
