@@ -1,6 +1,8 @@
 $(function() {
 	console.log("before global");
 
+	var top = "";
+	var topArray = [top1, top2, top3, top4, top5, top6, top7];
 	var playerRed = "Player Red"
 	var playerYellow = "Player Yellow"
 	var player1Color = 'rgb(255, 0, 0)'
@@ -94,10 +96,16 @@ $(function() {
 	var currentName = playerRed;
 	var currentColor = player1Color;
 
-	$('td').on('click', function(){
-		
+
+	$('td').on('click', function(event){
+		// if (topArray.includes(top)){
+		// 	(player1Color || player2Color == true);
+		// 	!playerSwitch();
+		// }
+
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
+		console.log(top);
 
 	DiffColor(bottomFree,col,currentColor);
 
@@ -117,10 +125,10 @@ $(function() {
 			currentName = playerRed;
 			$('h2').text(currentName + " it is your turn to connect")
 			currentColor = player1Color;
-		}	else {
-			currentName = playerYellow;
-			$('h2').text(currentName + " it is your turn to connect")
-			currentColor = player2Color;
+		}		else {
+				currentName = playerYellow;
+				$('h2').text(currentName + " it is your turn to connect")
+				currentColor = player2Color;
 		}
 	}
 });
