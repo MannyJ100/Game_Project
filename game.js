@@ -1,12 +1,12 @@
 $(function() {
-console.log("before global");
+	console.log("before global");
 
-var playerRed = "Player Red"
-var playerYellow = "Player Yellow"
-var player1Color = 'rgb(255, 0, 0)'
-var player2Color = 'rgb(255, 252, 0)'
-var gameOn = true;
-var table = $('table tr');
+	var playerRed = "Player Red"
+	var playerYellow = "Player Yellow"
+	var player1Color = 'rgb(255, 0, 0)'
+	var player2Color = 'rgb(255, 252, 0)'
+	var gameOn = true;
+	var table = $('table tr');
 
 
 	// identify td location in table to change colour. Finds cell
@@ -14,7 +14,7 @@ var table = $('table tr');
 		return table.eq(rowI).find('td').eq(colI).css('background-color',color);
 	}
 
-	// Someting to tell us current colour of button
+	// Someting to tell us current colour of button, remove colour as not wanting to change here
 	function returnColor(rowI,colI){
 		return table.eq(rowI).find('td').eq(colI).css('background-color');
 	}
@@ -22,8 +22,8 @@ var table = $('table tr');
 	// Find bottom avail free slot
 	function lowestFree(colI) {
 	
-		var colorFeedback = returnColor(5,colI);
-		for (var row = 5; row > -1; row--) {
+		var colorFeedback = returnColor(6,colI);
+		for (var row = 6; row > -1; row--) {
 			colorFeedback = returnColor(row,colI);
 			if (colorFeedback === 'rgb(128, 128, 128)') {
 				return row
@@ -37,20 +37,20 @@ var table = $('table tr');
 	}
 
 	function chkWinVert(){
-		// Vertical
+		// Vertical 3 rows and 7 columns need to be checked
 		for (var row = 0; row < 3; row++){
 			for (var col = 0; col < 7; col++){
 				if (colorMatch(returnColor(row,col), returnColor(row+1,col), returnColor(row+2,col), returnColor(row+3,col))){
 					console.log("hihi");
 					return true;
-					}	else {
-						console.log("no match");
-					}
+				}	else {
+					console.log("no match");
 				}
-			}	
+			}
+		}	
 	}
 		
-		// Horizontal
+		// Horizontal 6 rows and 4 columns need to be checked
 	function chkWinHor() {	
 		for (var row = 0; row < 6; row++){
 			for (var col = 0; col < 4; col++){
@@ -63,7 +63,7 @@ var table = $('table tr');
 			}		
 	}	
 		
-		// Diagonal
+		// Diagonal with pos slopes and neg slopes
 	function chkWinDiag() {
 		for (var row = 0; row < 7; row++){
 			for (var col = 0; col < 5; col++){				
