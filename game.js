@@ -78,7 +78,7 @@ var table = $('table tr');
 			}	
 	 }
 		
-		// Current player
+		// Starting player
 	var currentPlayer = 1;
 	var currentName = playerRed;
 	var currentColor = player1Color;
