@@ -95,16 +95,17 @@ $(function() {
 	var currentColor = player1Color;
 
 	$('td').on('click', function(){
-
+		
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
 
 	DiffColor(bottomFree,col,currentColor);
 
 		if (chkWinVert() || chkWinHor() || chkWinDiag()) {
-			alert("You Have Won");
-			resetGrid();
-		}
+			setTimeout(function() { 
+				alert("You Have Won");
+				resetGrid();},500);
+			}
 	playerSwitch();
 	})
 

@@ -3,28 +3,34 @@ body {
 	font-family: 'Bungee', cursive;
 }
 
+
 h1 {
 	font-size: 50px;
 	color: yellow;
 }
 
+
 p {
 	color: red;
 }
+
 
 h2 {
 	color: white;
 }
 
+
 .board {
 	border-radius: 10px;
 }
+
 
 #Reset {
 	margin-top: 10px;
 	color: red;
 	background-color: yellow;
 }
+
 
 td {
 	margin: 1px;
