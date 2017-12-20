@@ -1,20 +1,18 @@
 body {
 	background-color: black;
+	font-family: 'Bungee', cursive;
 }
 
 h1 {
-	font-family: 'Bungee', cursive;
 	font-size: 50px;
 	color: yellow;
 }
 
 p {
-	font-family: 'Bungee', cursive;
 	color: red;
 }
 
 h2 {
-	font-family: 'Bungee', cursive;
 	color: white;
 }
 
@@ -23,7 +21,6 @@ h2 {
 }
 
 #Reset {
-	font-family: 'Bungee', cursive;
 	margin-top: 10px;
 	color: red;
 	background-color: yellow;
