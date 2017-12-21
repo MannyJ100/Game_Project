@@ -6,6 +6,7 @@ Connect 4 is a popular two player game with the objective being to connect 4 cou
 
 When developing the game, these are the technologies that were used an implemented:
 
+- Sublime Text
 - HTML 5
 - CSS
 - Javascript
@@ -24,6 +25,8 @@ When developing the game, these are the technologies that were used an implement
 
 ##Installation and Usage
 
-In order to have access to the game, you must clone it from my GitHub repository titled Game Project. Here is a link to my Github Game Project page repository.(https://github.com/MannyJ100/Game_Project/tree/Feature)
+In order to have access to the game, you must clone it from my GitHub repository titled Game Project. 
+
+Here is a link to my Github Game Project page repository.(https://github.com/MannyJ100/Game_Project/tree/Feature)
 
 
