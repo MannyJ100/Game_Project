@@ -24,5 +24,6 @@ When developing the game, these are the technologies that were used an implement
 
 ##Installation
 
+In order to have access to the game by cloning it from my GitHub repository titled Game Project. Here is a link to that repository (https://github.com/MannyJ100/Game_Project/tree/Feature)
 
 
