@@ -2,7 +2,7 @@ $(function() {
 	console.log("before global");
 
 	var top = "";
-	var topArray = [top1, top2, top3, top4, top5, top6, top7];
+	var topArray = ["top1", "top2", "top3", "top4", "top5", "top6", "top7"];
 	var playerRed = "Player Red"
 	var playerYellow = "Player Yellow"
 	var player1Color = 'rgb(255, 0, 0)'
@@ -100,15 +100,10 @@ $(function() {
 	$('td').on('click', function(event){
 		top = event.target.id;
 		var topColor = $(this).css('background-color'); 
-		if (topArray.includes(top) && (topColor === "rgb(128, 128, 128)")){
-			
-			playerSwitch();
-		} else {
-			alert('hi');
-		}
 
-		
-	
+		var test = topArray.includes(top);
+		var test2 = topColor === "rgb(128, 128, 128)";
+		console.log(top);
 
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
@@ -121,7 +116,19 @@ $(function() {
 				alert("You Have Won");
 				resetGrid();},500);
 			}
-	playerSwitch();
+		if (test && test2){
+			
+			playerSwitch();
+			// alert("test and test2");
+
+		}		else if (!topArray.includes(top)){
+			playerSwitch();
+			// alert("else if");
+		}		else {
+			
+			alert("Not A Valid Move");
+		}
+
 	})
 
 	
