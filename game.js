@@ -24,8 +24,8 @@ $(function() {
 	// Find bottom avail free slot
 	function lowestFree(colI) {
 	
-		var colorFeedback = returnColor(6,colI);
-		for (var row = 6; row > -1; row--) {
+		var colorFeedback = returnColor(5,colI);
+		for (var row = 5; row > -1; row--) {
 			colorFeedback = returnColor(row,colI);
 			if (colorFeedback === 'rgb(128, 128, 128)') {
 				return row
@@ -98,10 +98,17 @@ $(function() {
 
 
 	$('td').on('click', function(event){
-		// if (topArray.includes(top)){
-		// 	(player1Color || player2Color == true);
-		// 	!playerSwitch();
-		// }
+		top = event.target.id;
+		// var topColor = $(this).css('background-color'); 
+		// if (topArray.includes(top) && (topColor === "rgb(128, 128, 128)")){
+			
+		// // 	console.log("hi");
+		// // } else {
+		// // 	playerSwitch();
+		// // }
+
+		
+	
 
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
@@ -129,6 +136,6 @@ $(function() {
 				currentName = playerYellow;
 				$('h2').text(currentName + " it is your turn to connect")
 				currentColor = player2Color;
-		}
+		}	
 	}
 });
