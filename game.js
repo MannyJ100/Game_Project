@@ -138,10 +138,17 @@ $(function() {
 			currentName = playerRed;
 			$('h2').text(currentName + " it is your turn to connect")
 			currentColor = player1Color;
-		}		else {
+			}	else {
 				currentName = playerYellow;
 				$('h2').text(currentName + " it is your turn to connect")
 				currentColor = player2Color;
-		}	
+			}	
 	}
+
+	var audio = document.getElementById("player");
+		audio.addEventListener("ended", function() {
+    		audio.src = "connect4.mp3";
+    		audio.play();
+	});
+		
 });
