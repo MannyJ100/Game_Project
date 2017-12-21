@@ -22,7 +22,7 @@ When developing the game, these are the technologies that were used an implement
 3) The first player to stack four counters next to each other either vertically, horizontally or diagonally is the winner.
 
 
-##Installation
+##Installation and Usage
 
 In order to have access to the game by cloning it from my GitHub repository titled Game Project. Here is a link to that repository (https://github.com/MannyJ100/Game_Project/tree/Feature)
 

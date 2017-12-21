@@ -45,9 +45,9 @@ $(function() {
 				if (colorMatch(returnColor(row,col), returnColor(row+1,col), returnColor(row+2,col), returnColor(row+3,col))){
 					console.log("hihi");
 					return true;
-				}	else {
-					console.log("no match");
-				}
+					}	else {
+						console.log("no match");
+					}
 			}
 		}	
 	}
@@ -116,22 +116,21 @@ $(function() {
 				alert("You Have Won");
 				resetGrid();},500);
 			}
-		if (test && test2){
-			
-			playerSwitch();
-			// alert("test and test2");
+		
+			if (test && test2){	
+				playerSwitch();
+				// alert("test and test2");
+			}		else if (!topArray.includes(top)){
+					playerSwitch();
+				// alert("else if");
+			}		else {			
+					alert("Not A Valid Move");
+			}
 
-		}		else if (!topArray.includes(top)){
-			playerSwitch();
-			// alert("else if");
-		}		else {
-			
-			alert("Not A Valid Move");
-		}
-
-	})
+		})
 
 	
+	// Player Switch
 	function playerSwitch() {
 	currentPlayer = currentPlayer * -1
 
