@@ -15,8 +15,14 @@ When developing the game, these are the technologies that were used an implement
 
 ##How to Play the Game
 
- 
+1) Player 1 will be assigned to the Red colour counter whilst Player 2 will be assigned to the Yellow counter.
 
+2) Click on a column to place a counter in that column, the counter will fall to first bottom available slot available. 
+
+3) The first player to stack four counters next to each other either vertically, horizontally or diagonally is the winner.
+
+
+##Installation
 
 
 
