@@ -20,13 +20,14 @@ When developing the game, these are the technologies that were used an implement
 
 2) Click on a column to place a counter in that column, the counter will fall to first bottom available slot available. 
 
-3) The first player to stack four counters next to each other either vertically, horizontally or diagonally is the winner.
+3) The first player to stack four counters next to each other either vertically, horizontally or diagonally is the winner. 
 
+4) If you wish to restart the game at any time, click on the restart button at the bottom of the page. If not the game will automatically restart once a winner is crowned. 
 
 ##Installation and Usage
 
-In order to have access to the game, you must clone it from my GitHub repository titled Game Project. 
+In order to have access to the game, you must clone it from my GitHub repository titled Game Project. My username is MannyJ100.
 
-Here is a link to my Github Game Project page repository.(https://github.com/MannyJ100/Game_Project/tree/Feature)
+To make it easier, here is a link to my Github Game Project page repository.(https://github.com/MannyJ100/Game_Project/tree/Feature)
 
 
