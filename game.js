@@ -148,7 +148,7 @@ $(function() {
 	var audio = document.getElementById("player");
 		audio.addEventListener("ended", function() {
     		audio.src = "connect4.mp3";
-    		audio.play();
+    		audio.loop();
 	});
-		
+
 });
