@@ -113,7 +113,7 @@ $(function() {
 
 		if (chkWinVert() || chkWinHor() || chkWinDiag()) {
 			setTimeout(function() { 
-				alert("You Have Won");
+				alert("Woohoo, you are the Winner! Your mate owes you one beverage of your choice!");
 				resetGrid();},500);
 			}
 		
