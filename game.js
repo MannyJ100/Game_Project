@@ -99,13 +99,13 @@ $(function() {
 
 	$('td').on('click', function(event){
 		top = event.target.id;
-		// var topColor = $(this).css('background-color'); 
-		// if (topArray.includes(top) && (topColor === "rgb(128, 128, 128)")){
+		var topColor = $(this).css('background-color'); 
+		if (topArray.includes(top) && (topColor === "rgb(128, 128, 128)")){
 			
-		// // 	console.log("hi");
-		// // } else {
-		// // 	playerSwitch();
-		// // }
+			playerSwitch();
+		} else {
+			alert('hi');
+		}
 
 		
 	
