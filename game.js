@@ -16,7 +16,7 @@ $(function() {
 		return table.eq(rowI).find('td').eq(colI).css('background-color',color);
 	}
 
-	// Someting to tell us current colour of button, remove colour as not wanting to change here
+	// Something to tell us current colour of button, remove colour as not wanting to change here
 	function returnColor(rowI,colI){
 		return table.eq(rowI).find('td').eq(colI).css('background-color');
 	}
