@@ -1,6 +1,6 @@
 # Game Project (Connect 4)
 
-Connect 4 is a popular two player game with the objective being to connect 4 counters by stacking them either horizontally, vertically or diagonally.
+Connect 4 is a popular two player game with the objective being to connect 4 counters by stacking them either horizontally, vertically or diagonally. The game was first created in 1974 and has since been a staple in households around the world.
 
 ##Technologies
 
