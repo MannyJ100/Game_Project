@@ -12,7 +12,7 @@ $(function() {
 
 
 	// identify td location in table to change colour. Finds cell
-	function DiffColor(rowI,colI,color) {
+	function diffColor(rowI,colI,color) {
 		return table.eq(rowI).find('td').eq(colI).css('background-color',color);
 	}
 
@@ -101,15 +101,15 @@ $(function() {
 		top = event.target.id;
 		var topColor = $(this).css('background-color'); 
 
-		var test = topArray.includes(top);
-		var test2 = topColor === "rgb(128, 128, 128)";
+		var topRow = topArray.includes(top);
+		var topRowColor = topColor === "rgb(128, 128, 128)";
 		console.log(top);
 
 		var col = $(this).closest('td').index();
 		var bottomFree = lowestFree(col);
 		console.log(top);
 
-	DiffColor(bottomFree,col,currentColor);
+	diffColor(bottomFree,col,currentColor);
 
 		if (chkWinVert() || chkWinHor() || chkWinDiag()) {
 			setTimeout(function() { 
@@ -117,7 +117,7 @@ $(function() {
 				resetGrid();},500);
 			}
 		
-			if (test && test2){	
+			if (topRow && topRowColor){	
 				playerSwitch();
 				// alert("test and test2");
 			}		else if (!topArray.includes(top)){
