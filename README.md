@@ -26,7 +26,7 @@ When developing the game, these are the technologies that were used an implement
 
 ##Installation and Usage
 
-In order to have access to the game, you must clone it from my GitHub repository titled Game Project. My username is MannyJ100.
+In order to have access to the game, you must clone it from my GitHub repository titled Game Project. The username is MannyJ100.
 
 To make it easier, here is a link to my Github Game Project page repository.(https://github.com/MannyJ100/Game_Project/tree/Feature)
 
